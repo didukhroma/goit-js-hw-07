@@ -1,0 +1,17 @@
+body {
+  padding: 20px;
+}
+#gallery {
+  list-style: none;
+  display: flex;
+}
+.gallery__element {
+  width: 300px;
+}
+.gallery__element:not(:last-child) {
+  margin-right: 30px;
+}
+.gallery__picture {
+  display: block;
+  width: 100%;
+}
