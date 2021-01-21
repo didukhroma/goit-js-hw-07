@@ -11,11 +11,13 @@
 
 //     Категория: Животные
 //     Количество элементов: 4
-const selectedByClass = document.querySelectorAll('.item');
-console.log(`В списке ${selectedByClass.length} категории`);
-selectedByClass.forEach(elem => {
-  const elemTitle = elem.querySelector('h2');
-  const elemSumElements = elem.querySelectorAll('li');
-  console.log(`Категория: ${elemTitle.textContent}`);
-  console.log(`Количество элементов: ${elemSumElements.length}`);
+//-------------------
+const selectedElemRef = document.querySelectorAll('.item');
+console.log(`В списке ${selectedElemRef.length} категории`);
+//------------------
+selectedElemRef.forEach(elem => {
+  const elemTitleSelector = elem.querySelector('h2');
+  const elementsSelector = elem.querySelectorAll('li');
+  console.log(`Категория: ${elemTitleSelector.textContent}`);
+  console.log(`Количество элементов: ${elementsSelector.length}`);
 });

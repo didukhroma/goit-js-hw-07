@@ -25,16 +25,25 @@ const images = [
 // Все элементы галереи должны добавляться в DOM за одну операцию вставки.
 // Добавь минимальное оформление галереи флексбоксами или гридами через css-классы.
 //------------I-var---CreateElement
+// const arrNewImagesMarkup = images.map(elem => {
+//   const galleryElement = document.createElement('li');
+//   galleryElement.classList.add('gallery__element');
+//   const images = document.createElement('img');
+//   images.classList.add('gallery__picture');
+//   images.src = elem.url;
+//   images.alt = elem.alt;
+//   galleryElement.append(images);
+//   return galleryElement;
+// });
+//------------II-var---insertAdjacentHTML
 const arrNewImagesMarkup = images.map(elem => {
   const galleryElement = document.createElement('li');
   galleryElement.classList.add('gallery__element');
-  const images = document.createElement('img');
-  images.classList.add('gallery__picture');
-  images.setAttribute('src', elem.url);
-  images.setAttribute('alt', elem.alt);
-  galleryElement.append(images);
+  galleryElement.insertAdjacentHTML(
+    'afterbegin',
+    `<img class="gallery__picture" src="${elem.url}" alt="${elem.alt}">`,
+  );
   return galleryElement;
 });
-
 const galleryListRef = document.querySelector('#gallery');
 galleryListRef.append(...arrNewImagesMarkup);
