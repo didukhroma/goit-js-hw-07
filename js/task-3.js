@@ -35,6 +35,8 @@ const images = [
 //   galleryElement.append(images);
 //   return galleryElement;
 // });
+// const galleryListRef = document.querySelector('#gallery');
+// galleryListRef.append(...arrNewImagesMarkup);
 //------------II-var---insertAdjacentHTML
 const arrNewImagesMarkup = images.map(elem => {
   const galleryElement = document.createElement('li');

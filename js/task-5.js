@@ -4,7 +4,7 @@
 const inputRef = document.querySelector('#name-input');
 const spanRef = document.querySelector('#name-output');
 const addText = event => {
-  spanRef.textContent =
-    event.target.value.length === 0 ? 'незнакомец' : event.target.value;
+  const inputWord = event.target.value;
+  spanRef.textContent = inputWord.length === 0 ? 'незнакомец' : inputWord;
 };
 inputRef.addEventListener('input', addText);
